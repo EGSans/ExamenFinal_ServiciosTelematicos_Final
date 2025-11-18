@@ -306,6 +306,7 @@ Punto 4.	Visualización con Grafana
 
 
 
+#######################################################################################
 
 
 
@@ -313,6 +314,31 @@ Punto 4.	Visualización con Grafana
 
 
 
+
+
+Conclusiones 
+
+
+
+
+1. ¿Qué aprendí al integrar Docker, AWS y Prometheus?
+
+Que Docker permite un entorno reproducible, AWS brinda escalabilidad real y Prometheus + Grafana agregan observabilidad profesional al proyecto. Combinados permiten un flujo DevOps moderno y sostenible.
+
+2️. ¿Qué fue lo más desafiante?
+
+Sin duda, integrar servicios entre sí:
+
+Nginx reverse proxy con HTTPS
+
+Puertos abiertos entre Node Exporter → Prometheus → Grafana
+
+Cambios de IP pública de EC2
+
+
+3️. ¿Qué beneficio aporta la observabilidad en DevOps?
+
+Permite reaccionar antes de que el servicio caiga: alertas automáticas, métricas en tiempo real, análisis histórico y decisiones basadas en datos. Es esencial para producción.
 
 
 
