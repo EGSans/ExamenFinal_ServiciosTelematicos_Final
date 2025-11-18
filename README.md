@@ -183,6 +183,155 @@ Node Exporter → puerto 9100
 
 
 
+En la ruta AWS/monitoring/prometheus encontraremos los siguientes archivos:
+
+
+
+
+AWS/monitoring/prometheus/prometheus.yml   (targets correctos)
+AWS/monitoring/prometheus/rules.yml        (alertas CPU>80%)
+
+
+
+Las métricas documentadas incluidas para este proyecto son:
+
+
+✔ node_cpu_seconds_total → uso real de CPU
+✔ node_memory_MemAvailable_bytes → memoria disponible
+✔ node_filesystem_avail_bytes → espacio libre del disco
+
+
+
+
+#######################################################################################
+
+
+
+4.	Visualización con Grafana 
+
+4.1 Levantar grafana
+
+cd monitoring
+
+docker compose -f docker-compose-grafana.yml up -d
+
+
+Una vez levantado puede acceder a grafana desde su navegador ingresando a http://IP_PUBLICA:3000
+
+
+
+
+
+Una vez dentro de grafana se debe escoger la opción Add new connection y el data source debe ser prometheus 
+
+
+
+Recuerde además indicar la ip de su instancia en la url además del puerto 9090 que es sobre el cuál se encuentra prometheus
+
+http://IP_PUBLICA:9090
+
+
+
+
+
+Los gráficos utilizados para este proyecto son:
+
+
+✔ Gráfico de uso de CPU (%)
+✔ Gráfico de uso de Memoria (%)
+✔ Gauge de uso de Disco (%)
+✔ Panel importado desde Grafana.com
+
+
+
+
+Evidencias de despliegue:
+
+
+
+Punto 1.	Empaquetado y despliegue local con Docker + SSL :
+
+
+<img width="1908" height="975" alt="image" src="https://github.com/user-attachments/assets/2f808994-6c7b-4394-a82b-fed919e081f0" />
+
+
+
+
+<img width="683" height="816" alt="image" src="https://github.com/user-attachments/assets/2de7b5bc-a133-4c99-b9ca-8955fa304421" />
+
+
+
+Punto 2.	Despliegue en la nube con AWS EC2:
+
+Acceso con la IP pública de la instancia + SSL 
+
+<img width="1915" height="968" alt="image" src="https://github.com/user-attachments/assets/b1818177-04fc-444d-8248-8e6c1ec72348" />
+
+
+
+<img width="669" height="804" alt="image" src="https://github.com/user-attachments/assets/7ddde4c2-c22b-498f-8301-4fbb8a3ab261" />
+
+
+
+Punto 3.	Monitoreo con Prometheus y Node Exporter
+
+
+
+
+<img width="1898" height="526" alt="image" src="https://github.com/user-attachments/assets/8e4ae5f1-9e6e-487f-bf5f-47e112424324" />
+
+
+
+
+
+
+Punto 4.	Visualización con Grafana
+
+
+
+<img width="749" height="749" alt="image" src="https://github.com/user-attachments/assets/33a0cdc2-2ad1-40ae-89ab-3a7fb282036a" />
+
+<img width="841" height="375" alt="image" src="https://github.com/user-attachments/assets/fe87c0d2-0f09-41dd-8701-1bd22a369743" />
+
+
+
+
+
+
+<img width="1525" height="775" alt="image" src="https://github.com/user-attachments/assets/10a09b34-d457-4e81-95df-456a00c3ab71" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
