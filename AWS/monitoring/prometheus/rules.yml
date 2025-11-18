@@ -1,0 +1,33 @@
+groups:
+  - name: basic-alerts
+    rules:
+
+      # CPU > 80%
+      - alert: HighCPUUsage
+        expr: (1 - avg(rate(node_cpu_seconds_total{mode="idle"}[2m]))) * 100 > 80
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          description: "CPU usage is above 80% for more than 2 minutes"
+          summary: "High CPU usage detected"
+
+      # RAM disponible < 10%
+      - alert: LowMemory
+        expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100 < 10
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          description: "Less than 10% RAM available"
+          summary: "Low memory detected"
+
+      # Disco < 20% libre
+      - alert: LowDiskSpace
+        expr: (node_filesystem_avail_bytes{fstype!~"tmpfs"} / node_filesystem_size_bytes{fstype!~"tmpfs"}) * 100 < 20
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          description: "Disk space below 20%"
+          summary: "Low disk space detected"
