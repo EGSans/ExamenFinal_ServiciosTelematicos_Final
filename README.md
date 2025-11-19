@@ -1,6 +1,15 @@
 # Examen Final Servicios Telemáticos
 Repositorio correspondiente al examen final de la asignatura de servicios telemáticos
 
+
+Desarrollador por:
+
+Juan Sebastian Ballesteros Sierra - 2200405
+Juan Esteban Salazar Toro -2221681
+
+Adicionalmente, se comparte el enlace del repositorio de Juan Esteban en caso de ser necesario : https://github.com/xJuanes21/parcial-telematicos-final
+
+
 #Descripción
 
 
