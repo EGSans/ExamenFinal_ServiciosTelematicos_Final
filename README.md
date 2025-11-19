@@ -2,7 +2,7 @@
 Repositorio correspondiente al examen final de la asignatura de servicios telemáticos
 
 
-Desarrollador por:
+Desarrollado por:
 
 Juan Sebastian Ballesteros Sierra - 2200405
 Juan Esteban Salazar Toro -2221681
